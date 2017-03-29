@@ -1,6 +1,8 @@
 package TestOne;
 
-
+/**
+* 先获取倒置的数字，比原来少一位避免溢出，再进行比较
+*/
 public class Nine {
 
 
