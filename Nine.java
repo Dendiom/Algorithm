@@ -1,27 +1,27 @@
 package TestOne;
 
 /**
-* 先获取倒置的数字，比原来少一位避免溢出，再进行比较
-*/
+ * 先获取倒置的数字，比原来少一位避免溢出，再进行比较
+ */
 public class Nine {
 
 
-//from leetcode  ,so good
-  public static boolean isPalindrome(int x) {
+    //from leetcode  ,so good
+    public static boolean isPalindrome(int x) {
 
-    if (x < 0) return false;
+        if (x < 0) return false;
 
-    int p = x;
-    int q = 0;
+        int p = x;
+        int q = 0;
 
-    while (p >= 10){
-        q *=10;
-        q += p%10;
-        p /=10;
+        while (p >= 10) {
+            q *= 10;
+            q += p % 10;
+            p /= 10;
+        }
+
+        return q == x / 10 && p == x % 10;
     }
-
-    return q == x / 10 && p == x % 10;
-}
 
 
     public static void main(String[] args) {

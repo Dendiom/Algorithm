@@ -1,8 +1,6 @@
 package TestOne;
 
 
-
-
 public class Five {
 
     public static int manacherLength(String s) {
@@ -26,7 +24,7 @@ public class Five {
             }
             System.out.println("position: " + i + " " + container[i]);
             //扩展
-            while (i + container[i] < lens && i - container[i] >= 0 && (formalString.charAt(i - container[i] ) == formalString.charAt(i + container[i]))) {
+            while (i + container[i] < lens && i - container[i] >= 0 && (formalString.charAt(i - container[i]) == formalString.charAt(i + container[i]))) {
                 container[i]++;
             }
             if (container[i] >= container[maxPosition]) {
@@ -57,7 +55,7 @@ public class Five {
                 container[i] = Math.min(maxRight - i, container[2 * maxPosition - i]);
             }
             //扩展
-            while (i + container[i] < lens && i - container[i] >= 0 && (formalString.charAt(i - container[i] ) == formalString.charAt(i + container[i]))) {
+            while (i + container[i] < lens && i - container[i] >= 0 && (formalString.charAt(i - container[i]) == formalString.charAt(i + container[i]))) {
                 container[i]++;
             }
             if (container[i] >= container[maxPosition]) {
@@ -67,7 +65,7 @@ public class Five {
         }
 //        if(s.length()%2 == 0)
 //            return s.substring((maxPosition - container[maxPosition] + 1)/2,maxRight/2);
-        return s.substring((maxPosition - container[maxPosition] + 1)/2,maxRight/2);
+        return s.substring((maxPosition - container[maxPosition] + 1) / 2, maxRight / 2);
     }
 
     public static void main(String[] args) {
