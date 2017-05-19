@@ -40,7 +40,7 @@ public class ThirtyThree {
 
     public static void main(String[] args){
         System.out.println(search(new int[]{2,1},2));
-        System.out.println(search(new int[]{4,5,6,1,3},6));
+        System.out.println(search(new int[]{8,5,6,7},8));
 //        System.out.println();
 //        System.out.println();
     }
