@@ -8,13 +8,8 @@ public class SixtySix {
     public static int[] plusOne(int[] digits) {
         int lastIndex = digits.length - 1;
 
-        if (digits[lastIndex] < 9) {
-            digits[lastIndex] = ++digits[lastIndex];
-            return digits;
-        }
-        digits[lastIndex] = 0;
 
-        for (int i = lastIndex - 1; i >= 0; i--) {
+        for (int i = lastIndex; i >= 0; i--) {
             if (digits[i] < 9) {
                 digits[i] = ++digits[i];
                 return digits;
