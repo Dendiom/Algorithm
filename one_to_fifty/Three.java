@@ -1,4 +1,4 @@
-package TestOne;
+package TestOne.one_to_fifty;
 
 import java.util.HashMap;
 import java.util.HashSet;
