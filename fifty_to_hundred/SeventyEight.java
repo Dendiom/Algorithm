@@ -8,8 +8,8 @@ public class SeventyEight {
 
     public static List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> ans = new ArrayList<>();
-        if(nums == null || nums.length == 0)
-            return ans;
+//        if(nums == null || nums.length == 0)               // doesn't need
+//            return ans;
         backtrack(ans, nums, new ArrayList<>(), 0);
         return ans;
     }
