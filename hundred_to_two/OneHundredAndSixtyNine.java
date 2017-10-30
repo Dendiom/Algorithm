@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
 public class OneHundredAndSixtyNine {
 
 	/**
-	 * short enough, but not fast
+	 * short enough, but not fast.
 	 */
 	public static int majorityElementBySort(int[] nums) {
 		Arrays.sort(nums);
@@ -16,7 +16,7 @@ public class OneHundredAndSixtyNine {
 	}
 
 	/**
-	 * 
+	 * use HashMap to record appear time, not good either, slower than sort.
 	 */
 	public static int majorityElementByHashmap(int[] nums) {
 		Map<Integer, Integer> store = new HashMap<>();
@@ -27,23 +27,41 @@ public class OneHundredAndSixtyNine {
 		for (int num : nums) {
 			if (store.containsKey(num)) {
 				int count = store.get(num);
-				System.out.println(count);
+				// System.out.println(count);
 				if (++count == targetCount) {
 					return num;
 				}
-				
+
 				store.put(num, count);
 			} else {
-				System.out.println("first " + num);
+				// System.out.println("first " + num);
 				store.put(num, 1);
 			}
 		}
-		return nums[0];  // can't reach 
+		return nums[0]; // can't reach
+	}
+
+	/**
+	 * o(1) extra space and o(n) time.
+	 */
+	public static int majorityElement(int[] nums) {
+		int major = nums[0], count = 1;
+		for (int i = 1; i < nums.length; i++) {
+			if (count == 0) {
+				count = 1;
+				major = nums[i];
+			} else if (major == nums[i]) {
+				count++;
+			} else
+				count--;
+
+		}
+		return major;
 	}
 
 	public static void main(String[] args) {
-		System.out.println(majorityElementByHashmap(new int[] { 1, 1, 3, 3, 3, 3,
-				2, 1, 3 }));
+		System.out.println(majorityElementByHashmap(new int[] { 1, 1, 3, 3, 3,
+				3, 2, 1, 3 }));
 
 	}
 
