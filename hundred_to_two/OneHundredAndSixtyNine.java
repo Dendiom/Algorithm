@@ -42,7 +42,7 @@ public class OneHundredAndSixtyNine {
 	}
 
 	/**
-	 * o(1) extra space and o(n) time.
+	 * o(1) extra space and o(n) time, genius solution!.
 	 */
 	public static int majorityElement(int[] nums) {
 		int major = nums[0], count = 1;
@@ -54,7 +54,6 @@ public class OneHundredAndSixtyNine {
 				count++;
 			} else
 				count--;
-
 		}
 		return major;
 	}
@@ -62,7 +61,6 @@ public class OneHundredAndSixtyNine {
 	public static void main(String[] args) {
 		System.out.println(majorityElementByHashmap(new int[] { 1, 1, 3, 3, 3,
 				3, 2, 1, 3 }));
-
 	}
 
 }
