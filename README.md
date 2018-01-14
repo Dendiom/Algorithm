@@ -1,3 +1,3 @@
 # LeetCode
-## Recording my code. 
-## Some package name may be wrong.
+*Recording my code.*   
+*Some package names may be wrong.*
