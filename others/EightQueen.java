@@ -1,4 +1,4 @@
-package TestOne.others;
+package LeetCode.others;
 
 
 public class EightQueen {  // recurse
