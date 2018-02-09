@@ -1,6 +1,6 @@
 package LeetCode.fifty_to_hundred;
 
-public class NinetySIx {
+public class NinetySix {
 
     /**
      * My solution:
@@ -15,6 +15,7 @@ public class NinetySIx {
         if (n < 2) {
             return n;
         }
+
 
         int[] dp = new int[n + 1];
         dp[0] = 1;
