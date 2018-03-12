@@ -9,7 +9,7 @@ public class NinetySix {
      *   let 1, 2, 3 be the head node.
      *   treeHead(1) = tree(2, 3) = dp[2];
      *   treeHead(2) = tree(1) * tree(3) = dp[1] * dp[3];
-     *   treeHead(3) = tree(2, 3) = dp[2];
+     *   treeHead(3) = tree(1, 2) = dp[2];
      */
     private static int numTrees(int n) {
         if (n < 2) {
