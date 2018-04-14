@@ -1,7 +1,7 @@
 package TestOne.hundred_to_two;
 
 
-public class OneHundredAndTwentyOne {
+public class TwentyOne {
 
     public static int maxPrice(int[] nums){
         if(nums == null || nums.length == 0){

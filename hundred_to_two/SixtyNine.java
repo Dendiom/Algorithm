@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CountDownLatch;
 
-public class OneHundredAndSixtyNine {
+public class SixtyNine {
 
 	/**
 	 * short enough, but not fast.

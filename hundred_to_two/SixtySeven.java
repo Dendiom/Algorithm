@@ -2,7 +2,7 @@ package TestOne.hundred_to_two;
 
 import java.util.Arrays;
 
-public class OneHundredAndSixtySeven {
+public class SixtySeven {
 
 	/**
 	 * array is sorted, so we can search from border to middle.

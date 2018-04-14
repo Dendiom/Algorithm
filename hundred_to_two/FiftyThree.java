@@ -1,7 +1,7 @@
 package TestOne.hundred_to_two;
 
 
-public class OneHundredAndFiftyThree {
+public class FiftyThree {
 
     public static int findMin(int[] nums){
         int left = 0;

@@ -3,7 +3,7 @@ package TestOne.hundred_to_two;
 
 import java.util.Arrays;
 
-public class OneHundredAndEightyNine {
+public class EightyNine {
 
     //o(1) extra space
     // k maybe more than nums.length

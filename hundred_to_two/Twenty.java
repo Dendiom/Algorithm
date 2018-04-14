@@ -3,7 +3,7 @@ package TestOne.hundred_to_two;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OneHundredAndTwenty {
+public class Twenty {
 
 	public static int minimumTotal(List<List<Integer>> triangle) {
 		// if (triangle == null)
