@@ -46,7 +46,7 @@ public class Sixty {
      * https://leetcode.com/problems/permutation-sequence/discuss/22508/An-iterative-solution-for-reference
      */
     public String getPermutationTwo(int n, int k) {
-        List<Integer> num = new LinkedList<Integer>();
+        List<Integer> num = new LinkedList<>();
         for (int i = 1; i <= n; i++) {
             num.add(i);
         }
@@ -54,14 +54,14 @@ public class Sixty {
         int[] fact = new int[n];  // factorial
         fact[0] = 1;
         for (int i = 1; i < n; i++) {
-            fact[i] = i*fact[i-1];
+            fact[i] = i * fact[i - 1];
         }
 
-        k = k-1;
+        k = k - 1;
         StringBuilder sb = new StringBuilder();
-        for (int i = n; i > 0; i--){
-            int ind = k/fact[i-1];
-            k = k%fact[i-1];
+        for (int i = n; i > 0; i--) {
+            int ind = k / fact[i - 1];
+            k = k % fact[i - 1];
             sb.append(num.get(ind));
             num.remove(ind);
         }
