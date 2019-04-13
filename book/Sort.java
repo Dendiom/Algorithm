@@ -39,12 +39,40 @@ public class Sort {
         }
 
         for (int i = 1; i < arr.length ; i++) {  // i为需要进行插入的数的下标
-            for (int j = i; j > 0; j--) {
-                if (arr[j] < arr[j - 1]) {
-                    int temp = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = temp;
+            int pivot = arr[i];
+            int j;
+            for (j = i - 1; j >= 0 && arr[j] > pivot; j--) {
+                arr[j + 1] = arr[j];
+            }
+
+            arr[j + 1] = pivot;
+        }
+    }
+
+    /**
+     * 希尔排序，o(n^1.3)，插入排序改进版，非稳定排序
+     */
+    public static void hellSort(int[] arr) {
+        if (arr == null || arr.length <= 1) {
+            return;
+        }
+
+        int d = arr.length;
+        while (true) {
+            d = d / 2;
+            for (int i = 0; i < d; i++) {   // 几轮排序
+                for (int j = i + d; j < arr.length; j = j + d) {
+                    int pivot = arr[j];
+                    int k;
+                    for (k = j - d; k >= 0 && arr[k] > pivot; k = k - d) {
+                        arr[k + d] = arr[k];
+                    }
+                    arr[k + d] = pivot;
                 }
+            }
+
+            if (d == 1) {
+                return;
             }
         }
     }
@@ -215,7 +243,7 @@ public class Sort {
         System.out.print("待排序数组：");
         System.out.println(Arrays.toString(arr));
 
-        heapSort(arr);
+        insertSort(arr);
         System.out.println(Arrays.toString(arr));
     }
 
